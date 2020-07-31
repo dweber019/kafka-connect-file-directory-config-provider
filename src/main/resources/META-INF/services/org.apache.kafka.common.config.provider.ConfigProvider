@@ -1,1 +1,1 @@
-com.provectus.kafka.connect.config.FileConfigProvider
+ch.w3tec.kafka.connect.config.FileDirectoryConfigProvider
