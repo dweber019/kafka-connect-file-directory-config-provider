@@ -61,6 +61,13 @@ configurations as follows:
 ```
 ${directory:/path-to-directory:file-name}
 ```
+The content of the referenced file with `file-name` will be the value.
+
+In addition you can use the old style by doing:
+```
+${directory:/path-to-file:property-key}
+```
+This will open the properties file content and with `property-key` you can get the value of a key in the file.
 
 ## Thanks
 https://github.com/apache/kafka/pull/5596
