@@ -41,6 +41,9 @@ public class FileDirectoryConfigProvider implements ConfigProvider {
             return new ConfigData(new HashMap<>());
         }
         Path p = Paths.get(path);
+        if (Files.notExists(p)) {
+            return new ConfigData(new HashMap<>());
+        }
         return Files.isDirectory(p) ? getFromDirectory(p) : getFromPropertiesFile(p);
     }
 
@@ -56,6 +59,9 @@ public class FileDirectoryConfigProvider implements ConfigProvider {
             return new ConfigData(new HashMap<>());
         }
         Path p = Paths.get(path);
+        if (Files.notExists(p)) {
+            return new ConfigData(new HashMap<>());
+        }
         return Files.isDirectory(p) ? getFromDirectory(p, keys) : getFromPropertiesFile(p, keys);
     }
 
